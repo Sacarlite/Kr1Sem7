@@ -9,7 +9,7 @@ std::vector<std::string> TextConsoleInput()
 	while (true) {
 		std::vector<std::string> text;//Объявления вектора строк
         std::string str;//Объявление вводимой строки
-        std::cout << "Ввод сжимаемого текста:" << std::endl;
+        std::cout << "Ввод анализируемого текста текста, при окончании ввода введите пустую строку:" << std::endl;
         try {	
             while(true) {
                 std::getline(std::cin, str);//Ввод строки с консоли
@@ -35,7 +35,7 @@ std::vector<std::string> TextConsoleInput()
 std::map<std::string, unsigned> CharsConsoleInput()
 {
     const int charCount = 1;
-    const unsigned defaultCount = 0;
+    const int defaultCount = 0;
     std::string str;//Объявление вводимой строки
     std::map<std::string, unsigned> chars;//Вектор символов
     std::cout << "Введите символы и нажмите ENTER:" << std::endl;
@@ -57,9 +57,10 @@ std::map<std::string, unsigned> CharsConsoleInput()
     for (auto iter = str.begin(); iter < str.end(); ++iter) {
 
         std::string strin(charCount, *iter);
-        if (!chars.contains(strin)) {//Если символ не присутствует в словаре
-            chars.insert({ strin, defaultCount });//Добавление в словарь 
-        }
+        auto a = chars.find(strin);
+        //if (!chars.contains(strin)) {//Если символ не присутствует в словаре
+        //    chars.insert({ strin, defaultCount });//Добавление в словарь 
+        //}
     }
     return chars;
 }

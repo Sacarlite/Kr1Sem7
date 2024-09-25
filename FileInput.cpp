@@ -21,10 +21,10 @@ std::vector<std::string> TextFileInput()
 				std::cout << "Не верное разрешение у файла.Повторитие попытку. " << std::endl;
 				continue;
 			}
-			if (std::filesystem::is_regular_file(fileName)) {//Проверка на системные фаилы
+			//if (std::filesystem::is_regular_file(fileName)) {//Проверка на системные фаилы
 				file.open(fileName);//Открытие потока ввода
 				std::cout << "Фаил открыт успешно. " << std::endl;
-			}
+			//}
 		}
 		catch (const std::exception&)//Обработка ошибки при чтении из фаила
 		{
@@ -35,7 +35,7 @@ std::vector<std::string> TextFileInput()
 		try {
 			file.exceptions(!std::ifstream::badbit | !std::ifstream::failbit);
 			std::string str;//Объявление вводимой строки
-			while (std::getline(file, str)) {
+			while (getline(file, str)) {
 				if (str.empty()) {//Если строка пуста то цикл прекращается
 					break;
 				}
@@ -98,9 +98,9 @@ std::map<std::string, unsigned> CharsFileInput()
 			for (auto iter = str.begin(); iter < str.end(); ++iter) {
 
 				std::string strin(charCount, *iter);
-				if (!chars.contains(strin)) {//Если символ не присутствует в словаре
-					chars.insert({ strin, defaultCount });//Добавление в словарь 
-				}
+				//if (autochars.find(strin)) {//Если символ не присутствует в словаре
+				//	chars.insert({ strin, defaultCount });//Добавление в словарь 
+				//}
 			
 			}
 		}

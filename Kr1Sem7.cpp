@@ -1,21 +1,21 @@
-#include <iostream>//Библеотека ввода и вывода
-#include <windows.h>//Библеотека ответственная за русскую локализацию консоли
-#include <conio.h>//Библеотека ответственная за функцию getch
-#include <vector>//Библеотека подключения вектора
+#include <iostream>//Библиотека ввода и вывода
+#include <windows.h>//Библиотека ответственная за русскую локализацию консоли
+#include <conio.h>//Библиотека ответственная за функцию getch
+#include <vector>//Библиотека подключения вектора
 #include "MainMenu.h"//Подключение HeaderFile с Enum-меню
 #include "Checks.h"//Подключение HeaderFile с проверками пользовательского ввода
-#include "ConsoleOutput.h"//Подключение HeaderFile с выводом списка животных на консоль
+#include "ConsoleOutput.h"//Подключение HeaderFile с выводом на консоль
 #include "FileInput.h"//Подключение HeaderFile с файловым вводом
 #include "FileOutput.h"//Подключение HeaderFile с файловым выводом
 #include "Input.h"//Подключение HeaderFile с вводом с консоли
 #include "Algoritm.h"//Подключение HeaderFile с вводом с консоли
 #include "PersonalInterface.h"//Подключение HeaderFile пользовательского интерфейса
-#include <map>//Подключение словаря 
+#include <map>//Подключение библиотеки со словарём 
 #define QUIT 27//Макрос присваивания Esc значение 27
 
 int main()
 {
-	setlocale(LC_CTYPE, "RU"); //Локализация
+	setlocale(LC_ALL, "Rus"); //Локализация
 	SetConsoleCP(1251); //функции для настройки локализации в строковых переменных при вводе
 	SetConsoleOutputCP(1251); //функции для настройки локализации в строковых переменных при выводе
 	int userChoice = 0; //Переменная пользовательского ввода
@@ -57,7 +57,7 @@ int main()
 			}
 			break;
 		case (FileDataInput):
-			chars = CharsFileInput(); //Ввод данных об апартаментов из файла
+			chars = CharsFileInput(); //Ввод символов из файла
 			CharsConsoleOutput(chars); //Вывод считанных данных на консоль
 			break;
 		}
