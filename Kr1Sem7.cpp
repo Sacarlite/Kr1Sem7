@@ -23,9 +23,9 @@ int main()
 	std::map<std::string, unsigned> chars;//Вектор символов
 	ShowGreetings(); //Вывод приветствия
 	ShowTask(); //Вывод задания
-	ShowTextInput();//Вывод предложение ввода текста
 	do
 	{
+		ShowTextInput();//Вывод предложение ввода текста
 		ShowInputOption(); //Вывод типа вввода
 		userChoice = GetChoise(); //Ввод пользовательского решения
 		switch (userChoice) //switch выбора консольного ввода или файлового

@@ -94,13 +94,14 @@ std::map<std::string, unsigned> CharsFileInput()
 			if (str.empty()) {//Если строка пуста то цикл прекращается
 				throw std::exception();
 			}
+			
 			//Перебор строки и деление на символы
 			for (auto iter = str.begin(); iter < str.end(); ++iter) {
 
 				std::string strin(charCount, *iter);
-				//if (autochars.find(strin)) {//Если символ не присутствует в словаре
-				//	chars.insert({ strin, defaultCount });//Добавление в словарь 
-				//}
+				if (!chars.contains(strin)) {//Если символ не присутствует в словаре
+					chars.insert({ strin, defaultCount });//Добавление в словарь 
+				}
 			
 			}
 		}

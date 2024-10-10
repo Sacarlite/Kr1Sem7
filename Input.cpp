@@ -58,9 +58,9 @@ std::map<std::string, unsigned> CharsConsoleInput()
 
         std::string strin(charCount, *iter);
         auto a = chars.find(strin);
-        //if (!chars.contains(strin)) {//Если символ не присутствует в словаре
-        //    chars.insert({ strin, defaultCount });//Добавление в словарь 
-        //}
+        if (!chars.contains(strin)) {//Если символ не присутствует в словаре
+            chars.insert({ strin, defaultCount });//Добавление в словарь 
+        }
     }
     return chars;
 }
