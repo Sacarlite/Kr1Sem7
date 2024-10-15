@@ -7,3 +7,4 @@ void ShowOutputType();//Функция вывода на консоль способа вывода итоговых данных
 void ShowOutputChoise();//Функция вывода на консоль выбора файла
 void ShowTextInput();//Функция вывода на консоль предложение ввода текста
 void ShowMassiveInput();//Функция вывода на консоль предложение ввода символов
+void ShowInputDataOutputType();

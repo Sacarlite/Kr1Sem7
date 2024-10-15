@@ -33,6 +33,13 @@ void ShowOutputType()
 	std::cout << "2)Нет" << std::endl;
 	std::cout << "Ввод:";
 }
+void ShowInputDataOutputType()
+{
+	std::cout << "Вы хотите записать исходные данные в файл?" << std::endl;
+	std::cout << "1)Да" << std::endl;
+	std::cout << "2)Нет" << std::endl;
+	std::cout << "Ввод:";
+}
 void ShowTextInput()
 {
 	std::cout << "Введите текст." << std::endl;

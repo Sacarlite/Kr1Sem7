@@ -33,14 +33,14 @@ int main()
 		{
 		case (ConsoleDataInput):
 			text = TextConsoleInput(); //Ввод текста с консоли
-			ShowOutputType(); //Вывод сообщения об сохранении выбранных данных в файл
+			ShowInputDataOutputType(); //Вывод сообщения об сохранении выбранных данных в файл
 			userChoice = GetChoise(); //Ввод пользовательского решения
 			if (userChoice == Yes) {
 				InputTextFileOutput(text);//Сохранение введёного текста
 			}
 			break;
 		case (FileDataInput):
-			text = TextFileInput(); //Ввод текста из файла
+			text = TextFileInput(); //Ввод текста из файлаsd
 			TextConsoleOutput(text); //Вывод считанных данных на консоль
 			break;
 		}
@@ -51,7 +51,7 @@ int main()
 		{
 		case (ConsoleDataInput):
 			chars = CharsConsoleInput(); //Ввод символов с консоли
-			ShowOutputType(); //Вывод сообщения об сохранении выбранных данных в файл
+			ShowInputDataOutputType(); //Вывод сообщения об сохранении выбранных данных в файл
 			userChoice = GetChoise(); //Ввод пользовательского решения
 			if (userChoice == Yes) {
 				InputCharsFileOutput(chars);//Сохранение введёных символов
